@@ -52,12 +52,15 @@ function formatDateMonth(dateMonth) {
       return 'Mês inválido';
   }
 }
+function formatZeroToLeft(date) {
+  return date < 10 ? `0${date}` : date;
+}
 
 function formatDate(dateDayOfTheWeek, dateDay, dateMonth, dateYear, dateHour, dateMinutes, dateSeconds) {
   const dateDayOfTheWeekFormated = formatDateOfTheWeek(dateDayOfTheWeek);
   const dateMonthFormated = formatDateMonth(dateMonth);
 
-  return `${dateDayOfTheWeekFormated}, ${dateDay} de ${dateMonthFormated} de ${dateYear} às ${dateHour}:${dateMinutes}:${dateSeconds}`;
+  return `${dateDayOfTheWeekFormated}, ${dateDay} de ${dateMonthFormated} de ${dateYear} às ${formatZeroToLeft(dateHour)}:${formatZeroToLeft(dateMinutes)}:${formatZeroToLeft(dateSeconds)}`;
 }
 
 function createNewDatePlusOne(element) {
