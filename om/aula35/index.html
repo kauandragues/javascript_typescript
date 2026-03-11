@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <section class="container">
+    <h1>Adicione uma tag</h1>
+    <form action>
+      <label for="tag">Qual elemento deseja adicionar?</label>
+      <select name="tag" id="tag">
+        <option value="">Selecione uma tag</option>
+        <option value="p">&lt;p&gt;</option>
+        <option value="div">&lt;div&gt;</option>
+        <option value="foot">&lt;footer&gt;</option>
+        <option value="section">&lt;section&gt;</option>
+      </select>
+
+      <label for="tag-content">Digite o conteúdo da tag:</label>
+      <textarea id="tag-content" name="tag-content" cols="83" rows="10"></textarea>
+
+      <button>Adicionar</button>
+    </form>
+
+  </section>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
