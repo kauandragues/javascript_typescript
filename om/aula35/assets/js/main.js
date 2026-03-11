@@ -25,8 +25,8 @@ function main() {
     return true;
   }
 
-  form.addEventListener('submit', evento => {
-    evento.preventDefault();
+  form.addEventListener('submit', event => {
+    event.preventDefault();
     const tag = document.querySelector("select[name='tag']").value;
     const tagContent = document.querySelector('textarea').value;
     if (!checkInputs(tag, tagContent)) return;
